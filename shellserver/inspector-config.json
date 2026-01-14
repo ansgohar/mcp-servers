@@ -1,0 +1,9 @@
+{
+  "command": "/Library/Frameworks/Python.framework/Versions/3.13/bin/uv",
+  "args": [
+    "--directory",
+    "/Users/gohar/GitHub/IBM-GitHub/Ahmad-gohar/mcp-servers/shellserver",
+    "run",
+    "server.py"
+  ]
+}
