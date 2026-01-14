@@ -9,12 +9,14 @@ This guide shows how to run the MCP Inspector using Docker with the container na
 Run the following command to start the MCP Inspector container:
 
 ```bash
-docker run --rm \
+docker run -d \
   --name gohar-mcp \
-  -p 127.0.0.1:6274:6274 \
-  -p 127.0.0.1:6277:6277 \
+  -p 6274:6274 \
+  -p 6277:6277 \
   -e HOST=0.0.0.0 \
-  -e MCP_AUTO_OPEN_ENABLED=false \
+  -e PORT=6274 \
+  -e PROXY_PORT=6277 \
+  -e DANGEROUSLY_OMIT_AUTH=true \
   ghcr.io/modelcontextprotocol/inspector:latest
 ```
 
